@@ -21,14 +21,14 @@ jobs:
       - name: Test DevContainer Feature
         uses: devcontainers/ci@v0.3
         with:
-          configFile: ./test/devcontainer.json
+          configFile: ./test/.devcontainer/devcontainer.json
           runCmd: |
             # Verify Node.js is available
             node --version
             npm --version
 
-            # Check if the package is installed
-            npm list @anthropic-ai/claude-code || echo "Package not found in npm list, checking with require..."
+            # Check if the package is installed globally (since that's our default now)
+            npm list -g @anthropic-ai/claude-code || echo "Package not found in global npm list, checking with require..."
 
             # Try to require the package
             node -e "try { require('@anthropic-ai/claude-code'); console.log('✅ @anthropic-ai/claude-code successfully installed and can be imported'); } catch(e) { console.error('❌ Failed to import @anthropic-ai/claude-code:', e.message); process.exit(1); }"

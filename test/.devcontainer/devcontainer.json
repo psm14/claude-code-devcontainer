@@ -2,7 +2,7 @@
   "name": "Claude Code Feature Test",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
   "features": {
-    "../src/claude-code": {
+    "./claude-code": {
       "version": "latest"
     }
   },
