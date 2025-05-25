@@ -1,0 +1,24 @@
+{
+  "id": "claude-code",
+  "version": "1.0.0",
+  "name": "Anthropic Claude Code",
+  "documentationURL": "https://github.com/anthropics/anthropic-sdk-typescript",
+  "description": "Installs the @anthropic-ai/claude-code package for integrating with Anthropic's Claude AI models",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": ["latest", "1.0.0"],
+      "default": "latest",
+      "description": "Select the version of @anthropic-ai/claude-code to install"
+    },
+    "global": {
+      "type": "boolean",
+      "default": true,
+      "description": "Install the package globally"
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils",
+    "ghcr.io/devcontainers/features/node"
+  ]
+}

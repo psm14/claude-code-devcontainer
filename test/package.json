@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-feature-test",
+  "version": "1.0.0",
+  "description": "Test project for the claude-code devcontainer feature",
+  "main": "example.ts",
+  "scripts": {
+    "test": "node -r ts-node/register example.ts",
+    "build": "tsc example.ts",
+    "start": "node example.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

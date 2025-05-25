@@ -1,0 +1,20 @@
+{
+  "name": "@anthropic-ai/claude-code DevContainer Feature",
+  "version": "1.0.0",
+  "description": "A collection of DevContainer Features that installs the @anthropic-ai/claude-code package for AI development with Anthropic's Claude models",
+  "repository": "https://github.com/your-username/claude-code-devcontainer",
+  "keywords": [
+    "devcontainer",
+    "feature",
+    "anthropic",
+    "claude",
+    "ai",
+    "typescript",
+    "javascript",
+    "node"
+  ],
+  "author": {
+    "name": "Your Name"
+  },
+  "license": "MIT"
+}
