@@ -67,5 +67,5 @@ jobs:
         uses: devcontainers/action@v1
         with:
           publish-features: "true"
-          features-namespace: psm14
+          features-namespace: ${{ github.repository_owner }}
           base-path-to-features: "./src"
