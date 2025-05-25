@@ -69,10 +69,3 @@ else
         echo "⚠️  Package installed but verification failed (this may be normal)"
     fi
 fi
-
-echo ""
-echo "🔧 Usage Example:"
-echo "   import { Anthropic } from '@anthropic-ai/claude-code';"
-echo "   const client = new Anthropic({ apiKey: 'your-api-key' });"
-echo ""
-echo "📚 Documentation: https://github.com/anthropics/anthropic-sdk-typescript"
