@@ -5,8 +5,8 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
-  release:
-    types: [published]
+  #release:
+  #types: [published]
 
 permissions:
   contents: read
@@ -36,7 +36,8 @@ jobs:
       - name: Test DevContainer Feature
         uses: devcontainers/ci@v0.3
         with:
-          cacheFrom: ghcr.io/${{ github.repository_owner }}/claude-code:latest
+          imageName: ghcr.io/${{ github.repository_owner }}/claude-code-devcontainer
+          cacheFrom: ghcr.io/${{ github.repository_owner }}/claude-code-devcontainer:latest
           configFile: ./.devcontainer/devcontainer.json
           runCmd: |
             # Verify Node.js is available
@@ -49,7 +50,7 @@ jobs:
   publish:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event_name == 'release'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
 
     steps:
       - name: Checkout
