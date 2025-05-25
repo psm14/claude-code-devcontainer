@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Copy feature to .devcontainer directory
+      - name: Copy DevContainer Feature
         run: |
           cp -r src/claude-code .devcontainer/features/claude-code
 
