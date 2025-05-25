@@ -1,14 +1,10 @@
 {
   "name": "Claude Code Feature Test",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
+  "initializeCommand": "cp -r src/claude-code .devcontainer/features/claude-code",
   "features": {
     "./features/claude-code": {
       "version": "latest"
-    }
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": ["ms-vscode.vscode-typescript-next"]
     }
   }
 }
