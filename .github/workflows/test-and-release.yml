@@ -68,3 +68,5 @@ jobs:
           publish-features: "true"
           features-namespace: "feature"
           base-path-to-features: "./src"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
