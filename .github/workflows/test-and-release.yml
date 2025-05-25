@@ -8,6 +8,10 @@ on:
   release:
     types: [published]
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -25,6 +29,8 @@ jobs:
       - name: Test DevContainer Feature
         uses: devcontainers/ci@v0.3
         with:
+          imageName: ghcr.io/${{ github.repository_owner }}/claude-code
+          cacheFrom: ghcr.io/${{ github.repository_owner }}/claude-code:latest
           configFile: ./.devcontainer/devcontainer.json
           runCmd: |
             # Verify Node.js is available
@@ -38,9 +44,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: github.event_name == 'release'
-    permissions:
-      contents: read
-      packages: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -56,4 +60,5 @@ jobs:
         uses: devcontainers/action@v1
         with:
           publish-features: "true"
+          features-namespace: psm14
           base-path-to-features: "./src"
