@@ -66,5 +66,5 @@ jobs:
         uses: devcontainers/action@v1
         with:
           publish-features: "true"
-          features-namespace: "psm14/claude-code"
+          features-namespace: ""
           base-path-to-features: "./src"
