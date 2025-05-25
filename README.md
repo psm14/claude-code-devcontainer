@@ -10,7 +10,7 @@ To use this feature in your devcontainer, add it to your `.devcontainer/devconta
 {
   "image": "mcr.microsoft.com/devcontainers/typescript-node",
   "features": {
-    "ghcr.io/psm14/claude-code-devcontainer/claude-code:latest": {}
+    "ghcr.io/psm14/features/claude-code:latest": {}
   }
 }
 ```
@@ -28,7 +28,7 @@ To use this feature in your devcontainer, add it to your `.devcontainer/devconta
 
 ```json
 "features": {
-  "ghcr.io/psm14/claude-code-devcontainer/claude-code:latest": {
+  "ghcr.io/psm14/features/claude-code:latest": {
     "version": "1.0.0",
     "global": false
   }
