@@ -1,6 +1,6 @@
 # Claude Code DevContainer Feature
 
-This devcontainer feature adds the `@anthropic-ai/claude-code` package to your development environment, enabling integration with Anthropic's Claude AI models.
+Devcontainer feature to add [Claude Code](https://www.anthropic.com/claude-code) to your environment.
 
 ## Usage
 
@@ -34,10 +34,6 @@ To use this feature in your devcontainer, add it to your `.devcontainer/devconta
   }
 }
 ```
-
-## About @anthropic-ai/claude-code
-
-For more information about claude-code, visit the [official website](https://www.anthropic.com/claude-code).
 
 ## License
 
