@@ -10,10 +10,7 @@ To use this feature in your devcontainer, add it to your `.devcontainer/devconta
 {
   "image": "mcr.microsoft.com/devcontainers/typescript-node",
   "features": {
-    "ghcr.io/your-username/claude-code-devcontainer/claude-code:latest": {
-      "version": "latest",
-      "global": false
-    }
+    "ghcr.io/psm14/claude-code-devcontainer/claude-code:latest": {}
   }
 }
 ```
@@ -25,31 +22,18 @@ To use this feature in your devcontainer, add it to your `.devcontainer/devconta
 | `version` | string  | `"latest"` | Version of @anthropic-ai/claude-code to install |
 | `global`  | boolean | `true`     | Whether to install the package globally         |
 
-## Examples
-
-### Install latest version globally (default)
-
-```json
-"features": {
-  "ghcr.io/your-username/claude-code-devcontainer/claude-code:latest": {}
-}
-```
+## Alternate Usage Examples
 
 ### Install specific version locally
 
 ```json
 "features": {
-  "ghcr.io/your-username/claude-code-devcontainer/claude-code:latest": {
+  "ghcr.io/psm14/claude-code-devcontainer/claude-code:latest": {
     "version": "1.0.0",
     "global": false
   }
 }
 ```
-
-## Requirements
-
-- Node.js and npm must be available in the container
-- This feature should be installed after Node.js features
 
 ## About @anthropic-ai/claude-code
 
