@@ -15,23 +15,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Copy feature to .devcontainer directory
+        run: |
+          cp -r src/claude-code .devcontainer/features/claude-code
+
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Test DevContainer Feature
         uses: devcontainers/ci@v0.3
         with:
-          configFile: ./test/.devcontainer/devcontainer.json
+          configFile: ./.devcontainer/devcontainer.json
           runCmd: |
             # Verify Node.js is available
             node --version
             npm --version
 
-            # Check if the package is installed globally (since that's our default now)
-            npm list -g @anthropic-ai/claude-code || echo "Package not found in global npm list, checking with require..."
-
-            # Try to require the package
-            node -e "try { require('@anthropic-ai/claude-code'); console.log('✅ @anthropic-ai/claude-code successfully installed and can be imported'); } catch(e) { console.error('❌ Failed to import @anthropic-ai/claude-code:', e.message); process.exit(1); }"
+            # Check if the package is installed
+            npm list -g @anthropic-ai/claude-code
 
   publish:
     needs: test

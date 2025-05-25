@@ -2,11 +2,10 @@
   "name": "Claude Code Feature Test",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
   "features": {
-    "./claude-code": {
+    "./features/claude-code": {
       "version": "latest"
     }
   },
-  "postCreateCommand": "npm install && npm run test",
   "customizations": {
     "vscode": {
       "extensions": ["ms-vscode.vscode-typescript-next"]
