@@ -66,7 +66,7 @@ jobs:
         uses: devcontainers/action@v1
         with:
           publish-features: "true"
-          features-namespace: "feature"
+          features-namespace: "${{ github.repository_owner }}/features"
           base-path-to-features: "./src"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
