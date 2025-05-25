@@ -37,4 +37,4 @@ To use this feature in your devcontainer, add it to your `.devcontainer/devconta
 
 ## License
 
-This devcontainer feature is provided under the MIT License.
+This devcontainer feature is provided under the MIT License. This feature simply installs Claude Code, which itself is distributed under [its own license](https://github.com/anthropics/claude-code).
