@@ -66,5 +66,5 @@ jobs:
         uses: devcontainers/action@v1
         with:
           publish-features: "true"
-          features-namespace: ""
+          features-namespace: "feature"
           base-path-to-features: "./src"
